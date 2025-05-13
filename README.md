@@ -3,7 +3,7 @@
 # HanaVerse 🌸
 
   
-![HanaVerse Banner](https://via.placeholder.com/800x200?text=HanaVerse+-+Chat+with+Ollama)
+![HanaVerse Banner](![logo](https://github.com/user-attachments/assets/a1623954-cece-437d-bf6b-01dcbf0fcd88))
 
 **An interactive web UI for chatting with Ollama, featuring Hana - a lively 2D anime character**
 
