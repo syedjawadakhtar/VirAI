@@ -74,9 +74,18 @@ After running the server open index.html in your web browser and accese **HanaVe
 
 
 ## 📸 Screenshots
-<div align="center">
-  <img src="https://via.placeholder.com/400x300?text=HanaVerse+Screenshot+1" alt="HanaVerse Chat Interface" width="45%">
-</div>
+<p align="center">
+  <img src="https://github.com/user-attachments/assets/4d9f3893-8794-49e4-b1d3-4fdbcd6258c5" alt="HanaVerse Chat Interface" width="45%">
+</p>
+
+## Models
+1. **Only support Cubism 4 models**
+
+2. **Models need to support motionsync3**
+
+   Reference: https://docs.live2d.com/en/cubism-editor-manual/motion-sync/
+   
+4. **Add your models in model directory**
 
 ## ⚙️ Configuration
 ### Ollama Models
@@ -94,7 +103,7 @@ Customize the system prompt to get specialized responses:
 2. **Coding Assistant:** "Provide code examples with detailed explanations. Use appropriate syntax highlighting."
 3. **Recipe Generator:** "Present ingredients as bullet points and steps as numbered lists."
 
-🔧 Project Structure
+## 🔧 Project Structure
 ```
 HanaVerse/
 ├── server.py              # Flask server for handling API requests
@@ -128,6 +137,7 @@ This project is licensed under the MIT License - see the LICENSE file for detail
 3. pixi-live2d-display for the WebGL rendering
 4. KaTeX for math rendering
 5. Prism for syntax highlighting
+6. Live2d motionsync library
 
 
 <div align="center">
