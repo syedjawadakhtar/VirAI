@@ -33,6 +33,12 @@
 - **Responsive Design**: Enjoy HanaVerse on desktop and mobile devices
 - **Real-time Response**: Stream responses as they're generated
 
+
+## 📸 Screenshots
+<p align="center">
+  <img src="https://github.com/user-attachments/assets/4d9f3893-8794-49e4-b1d3-4fdbcd6258c5" alt="HanaVerse Chat Interface" width="95%">
+</p>  
+
 ## 🚀 Installation
 
 ### Prerequisites
@@ -73,12 +79,8 @@ After running the server open index.html in your web browser and accese **HanaVe
 4. **Stop Generation:** Click the Stop button anytime to halt response generation
 
 
-## 📸 Screenshots
-<p align="center">
-  <img src="https://github.com/user-attachments/assets/4d9f3893-8794-49e4-b1d3-4fdbcd6258c5" alt="HanaVerse Chat Interface" width="45%">
-</p>
-
 ## Models
+
 1. **Only support Cubism 4 models**
 
 2. **Models need to support motionsync3**
