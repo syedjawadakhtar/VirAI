@@ -39,6 +39,10 @@
   <img src="https://github.com/user-attachments/assets/4d9f3893-8794-49e4-b1d3-4fdbcd6258c5" alt="HanaVerse Chat Interface" width="95%">
 </p>  
 
+## 💻Demo
+**This is just a skeleton demo**
+Link = https://hanavibe.vercel.app/
+
 ## 🚀 Installation
 
 ### Prerequisites
@@ -79,7 +83,7 @@ After running the server open index.html in your web browser and accese **HanaVe
 4. **Stop Generation:** Click the Stop button anytime to halt response generation
 
 
-## Models
+## 💃Models
 
 1. **Only support Cubism 4 models**
 
@@ -98,7 +102,7 @@ HanaVerse works with any model available in your Ollama installation. Some recom
 - ```mistral:latest``` - Alternative high-quality model
 - ```phi3:latest``` - Microsoft's compact but powerful model
 
-## System Prompts
+## 📖 System Prompts
 Customize the system prompt to get specialized responses:
 
 1. **Math Helper:** "Format math using LaTeX. Show step-by-step solutions."
@@ -146,4 +150,8 @@ You may use, copy, and run this software for personal or educational use only.
 
 <div align="center">
 Made with ♥️ by Ashish Patnaik
+</div>
+
+<div align="center">
+Don't Forget to ⭐Star⭐ the repo
 </div>
