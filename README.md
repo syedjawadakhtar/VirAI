@@ -41,7 +41,7 @@
 
 ## 💻Demo
 **This is just a skeleton demo**
-Link = https://hanavibe.vercel.app/
+Link = https://hanaverse.vercel.app/
 
 ## 🚀 Installation
 
