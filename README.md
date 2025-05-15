@@ -36,7 +36,7 @@
 
 ## 📸 Screenshots
 <p align="center">
-  <img src="https://github.com/user-attachments/assets/4d9f3893-8794-49e4-b1d3-4fdbcd6258c5" alt="HanaVerse Chat Interface" width="95%">
+  <img src="https://github.com/user-attachments/assets/339c2987-83c8-4063-ae90-6b4f6fd403b1" alt="HanaVerse Chat Interface" width="95%">
 </p>  
 
 ## 💻Demo
