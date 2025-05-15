@@ -3,7 +3,7 @@
 # HanaVerse 🌸
 
 <div align="center">
-  <img src="https://github.com/user-attachments/assets/4ef26c83-084d-403e-96e9-9e1dc700b992" alt="HanaVerse Chat Interface" width="25%">
+  <img src="https://github.com/user-attachments/assets/b299c4fd-642a-4b64-a52a-9a47303bd3dc" alt="HanaVerse Chat Interface" width="55%">
 </div>
 
 
