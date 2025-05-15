@@ -130,7 +130,9 @@ Contributions are welcome! Please feel free to submit a Pull Request.
 5. Open a Pull Request
 
 ### 📜 License
-This project is licensed under the MIT License - see the LICENSE file for details.
+This project is licensed under a Custom Non-Commercial Use License.  
+You may use, copy, and run this software for personal or educational use only.  
+**Commercial use and modification for commercial purposes are not allowed for now.**
 
 ### 🙏 Acknowledgements
 
