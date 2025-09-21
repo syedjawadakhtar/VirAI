@@ -34,7 +34,7 @@ h1 {
     display: flex;
     flex-direction: row;
     gap: 20px;
-    align-items: center;
+    align-items: stretch;
     width: 100%;
     max-width: 1400px;
     height: calc(100vh - 100px);
@@ -51,7 +51,6 @@ h1 {
     border: 8px solid #333;
     overflow: hidden;
     background-color: white;
-    /*background-image: url('https://backiee.com/static/wallpapers/1000x563/360260.jpg');*/
     background-image: url('./test.png');
     border-radius: 16px;
     flex-shrink: 0;
