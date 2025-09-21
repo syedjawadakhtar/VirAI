@@ -1,19 +1,18 @@
 <div align="center">
   
-# HanaVerse 🌸
+# VirAI 🌸
 
 <div align="center">
-  <img src="https://github.com/user-attachments/assets/b299c4fd-642a-4b64-a52a-9a47303bd3dc" alt="HanaVerse Chat Interface" width="55%">
+  <img src="./README.png" alt="VirAI Voice Interface" width="55%">
 </div>
 
 
-**An interactive web UI for chatting with Ollama, featuring Hana - a lively 2D anime character**
+**An interactive UI for interacting with Hana - a lively 2D anime character, to order food and have lively discussions.**
 
-[![GitHub stars](https://img.shields.io/github/stars/Ashish-Patnaik/HanaVerse?style=social)](https://github.com/Ashish-Patnaik/HanaVerse)
+[//]: # ([![GitHub stars]&#40;https://img.shields.io/github/stars/Ashish-Patnaik/VirAI?style=social&#41;]&#40;https://github.com/Ashish-Patnaik/VirAI&#41;)
 [![Made with Live2D](https://img.shields.io/badge/Made%20with-Live2D-ff69b4.svg)](https://www.live2d.com/)
 [![Made with Ollama](https://img.shields.io/badge/Made%20with-Ollama-blue.svg)](https://ollama.ai/)
 
-<a href="https://www.producthunt.com/posts/hanaverse?embed=true&utm_source=badge-featured&utm_medium=badge&utm_source=badge-hanaverse" target="_blank"><img src="https://api.producthunt.com/widgets/embed-image/v1/featured.svg?post_id=966157&theme=light&t=1747469127397" alt="HanaVerse - Talking&#0032;anime&#0032;character&#0032;WebUI&#0032;for&#0032;Ollama&#0032; | Product Hunt" style="width: 250px; height: 54px;" width="250" height="54" /></a>
 
 • [Features](#features) 
 • [Installation](#installation) 
@@ -28,24 +27,26 @@
 
 - **Speech to text**: Talk with Ollama's powerful language models in a friendly web UI and microphones
 - **Live 2D Animation**: Chat with Hana, an expressive anime character that responds to your interactions
-- **Markdown Support**: View beautifully formatted responses with syntax highlighting
 - **Know the expression of the avatar**: Display mathematical equations properly with KaTeX
 - **Customizable Settings**: Choose your Ollama model and configure system prompts
-- **Responsive Design**: Enjoy HanaVerse on desktop and mobile devices
+- **Responsive Design**: Enjoy VirAI on desktop and mobile devices
 - **Real-time Response**: Stream responses as they're generated
 
 
 ## 📸 Screenshots
-<p align="center">
-  <img src="https://github.com/user-attachments/assets/339c2987-83c8-4063-ae90-6b4f6fd403b1" alt="HanaVerse Chat Interface" width="95%">
-</p>  
 
-## 💻Demo
-**This is just a skeleton demo**
-Link = https://hanaverse.vercel.app/
+<div align="center">
+  <img src="./README-1.png" alt="VirAI Voice Interface" width="55%">
+</div> 
+
+[//]: # (## 💻Demo)
+
+[//]: # (**This is just a skeleton demo**)
+
+[//]: # (Link = https://VirAI.vercel.app/)
 
 
-https://github.com/user-attachments/assets/2647e1e5-4636-4594-9145-253ab665d618
+[//]: # (https://github.com/user-attachments/assets/2647e1e5-4636-4594-9145-253ab665d618)
 
 
 
@@ -61,26 +62,32 @@ https://github.com/user-attachments/assets/2647e1e5-4636-4594-9145-253ab665d618
 ### Step 1: Clone the repository
 
 ```bash
-git clone https://github.com/Ashish-Patnaik/HanaVerse.git
-cd HanaVerse
+git clone https://github.com/Ashish-Patnaik/VirAI.git
+cd VirAI
 ```
 ### Step 2: Install dependencies
 ```bash
 pip install -r requirements.txt
 ```
-### Step 3: Start the Flask server
+
+### Step 3: Enable Ollama CORS
+```bash
+OLLAMA_ORIGINS="*" ollama serve
+```
+
+### Step 4: Start the Flask server
 ```bash
 python server.py
 ```
 The server will start running at http://localhost:5000 by default.
 
-### Step 4: Access HanaVerse in your browser
+### Step 5: Access VirAI in your browser
 Use 
 ```python -m http.server 8000``` to serve the front end of the application on your browser.
 
 ### 💬 Usage
 
-1. **Start Chatting:** Type your message in the input box and press Send or hit Enter
+1. **Start interacting:** Press the microphone button on the website to record your voice
 2. **Change Settings:** Click the hamburger menu (☰) to access settings
 3. **Configure Ollama:**
 
@@ -103,7 +110,7 @@ Use
 
 ## ⚙️ Configuration
 ### Ollama Models
-HanaVerse works with any model available in your Ollama installation. Some recommended models:
+VirAI works with any model available in your Ollama installation. Some recommended models:
 
 - ```llama3:8b``` - Great general purpose assistant (default)
 - ```codellama:7b``` - Specialized for coding tasks
@@ -111,25 +118,36 @@ HanaVerse works with any model available in your Ollama installation. Some recom
 - ```phi3:latest``` - Microsoft's compact but powerful model
 
 ## 📖 System Prompts
-Customize the system prompt to get specialized responses:
+These sample prompts demonstrate how the system can be customized to create engaging, human-like conversations with customers:
 
-1. **Math Helper:** "Format math using LaTeX. Show step-by-step solutions."
-2. **Coding Assistant:** "Provide code examples with detailed explanations. Use appropriate syntax highlighting."
-3. **Recipe Generator:** "Present ingredients as bullet points and steps as numbered lists."
+1. **Ordering Lunch** - "Help the customer order lunch from the menu based on the current time of day. Highlight any benefits, offers, or discounts so that the customer feels excited and happy about their choice."
+
+2. **Booking a Table** - "Assist the customer in booking a table. Ask in a cheerful, natural way (not robotic) about when they would like to come, how many people will be joining, and if they already have dishes in mind. The interaction should feel like a friendly conversation with a human host."
+
+3. **Exploring the Menu** - "Guide an indecisive customer through the menu without overwhelming them. Simplify the choices by suggesting options based on the time of day and the current mood of the environment in Helsinki. Keep the tone warm and human-like, creating a sense of comfort and safety when they interact with our avatar."
 
 ## 🔧 Project Structure
 ```
 HanaVerse/
-├── server.py              # Flask server for handling API requests
-├── index.html          # Main web interface
-├── style.css           # CSS styling for the UI
-├── script.js           # Core functionality for Live2D character
-├── chat.js             # Chat interaction logic
-├── sdk/                # Live2D SDK components
-├── prism/              # Syntax highlighting library
-├── katex/              # Math rendering library
-├── models/             # Live2D model files for Hana
-└── requirements.txt    # Python dependencies
+├── server.py              # Main Flask server for Ollama API requests
+├── stt_ollama.py          # Speech-to-Text server using Whisper
+├── stt_simple.py          # Mock STT server for testing
+├── index.html             # Main web interface
+├── style.css              # CSS styling for the UI
+├── script.js              # Core Live2D character functionality
+├── chat.js                # Chat interaction logic
+├── voice.js               # Voice recording and STT integration
+├── sdk/                   # Live2D SDK components
+│   ├── live2d.min.js      # Live2D display library
+│   └── live2dcubismcore.min.js # Live2D core engine
+├── prism/                 # Syntax highlighting library
+│   ├── prism.js
+│   └── prism.css
+├── katex/                 # Math rendering library
+│   ├── katex.min.js
+│   └── katex.min.css
+├── models/                # Live2D model files for Hana
+└── requirements.txt       # Python dependencies
 ```
 
 ### 🤝 Contributing
@@ -148,16 +166,16 @@ You may use, copy, and run this software for personal or educational use only.
 
 ### 🙏 Acknowledgements
 
-1. Ollama for the local LLM runtime
+1. Whisper for the speech to text transcription
+2. Ollama for the local LLM runtime
 2. Live2D for the Cubism SDK
 3. pixi-live2d-display for the WebGL rendering
-4. KaTeX for math rendering
-5. Prism for syntax highlighting
-6. Live2d motionsync library
+4. Prism for syntax highlighting
+5. Live2d motionsync library
 
 
 <div align="center">
-Made with ♥️ by Team VirAI
+Made with ♥️ by Team VirAI <br />
 Thanks to Ashish Patnaik for the base code
 </div>
 

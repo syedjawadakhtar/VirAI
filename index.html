@@ -56,12 +56,37 @@
 </head>
 <body>
     <script src="prism/prism.js"></script>
-    <script src="katex/katex.min.js"></script>
     <h1>AitoFresh</h1>
 
     <div class="main-container">
         <div id="canvas-container">
             <canvas id="canvas"></canvas>
+        </div>
+        <div class="voice-container">
+            <div class="welcome-message">
+                <h2>Welcome to AitoFresh!</h2>
+                <p>Press the microphone to start recording, then stop to send your order.</p>
+            </div>
+            <div id="response-display" class="response-display">
+                <p>Waiting for your speech...</p>
+            </div>
+            <div class="voice-controls">
+                <button id="mic-button" class="mic-button" aria-label="Start voice recording">
+                    <svg class="mic-icon" viewBox="0 0 24 24" width="24" height="24">
+                        <path fill="currentColor" d="M12 2a3 3 0 0 1 3 3v6a3 3 0 0 1-6 0V5a3 3 0 0 1 3-3z"/>
+                        <path fill="currentColor" d="M19 10v1a7 7 0 0 1-14 0v-1a1 1 0 0 1 2 0v1a5 5 0 0 0 10 0v-1a1 1 0 0 1 2 0z"/>
+                        <path fill="currentColor" d="M11 20v2a1 1 0 0 0 2 0v-2h1a1 1 0 0 0 0-2h-4a1 1 0 0 0 0 2h1z"/>
+                    </svg>
+                    Start Recording
+                </button>
+                <button id="stop-mic-button" class="stop-button" disabled aria-label="Stop and send recording">
+                    <svg class="stop-icon" viewBox="0 0 24 24" width="24" height="24">
+                        <rect fill="currentColor" x="6" y="6" width="12" height="12" rx="2"/>
+                    </svg>
+                    Stop & Send
+                </button>
+            </div>
+            <div id="status" class="status">Status: Initializing...</div>
         </div>
         <div class="chat-container" style="display: none;">
             <button id="hamburger-menu" class="hamburger-menu" aria-label="Toggle settings menu">
@@ -96,37 +121,6 @@
                 <button id="stop-button" style="display: none;">Stop</button>
             </div>
             <div id="status">Status: Initializing...</div>
-        </div>
-        <div class="voice-container">
-            <div class="welcome-message">
-                <h2>Welcome to AitoFresh!</h2>
-                <p>Press the microphone to start ordering your perfect poke bowl</p>
-            </div>
-
-            <div class="voice-controls">
-    <button id="mic-button" class="mic-button" aria-label="Start voice interaction">
-        <svg class="mic-icon" viewBox="0 0 24 24" width="48" height="48">
-            <path fill="currentColor" d="M12 2a3 3 0 0 1 3 3v6a3 3 0 0 1-6 0V5a3 3 0 0 1 3-3z"/>
-            <path fill="currentColor" d="M19 10v1a7 7 0 0 1-14 0v-1a1 1 0 0 1 2 0v1a5 5 0 0 0 10 0v-1a1 1 0 0 1 2 0z"/>
-            <path fill="currentColor" d="M11 20v2a1 1 0 0 0 2 0v-2h1a1 1 0 0 0 0-2h-4a1 1 0 0 0 0 2h1z"/>
-        </svg>
-        <span class="mic-text">Tap to Speak</span>
-    </button>
-
-    <button id="stop-mic-button" class="stop-button" style="display: none;" aria-label="Stop interaction">
-        <svg class="stop-icon" viewBox="0 0 24 24" width="32" height="32">
-            <rect fill="currentColor" x="6" y="6" width="12" height="12" rx="2"/>
-        </svg>
-        <span>Stop</span>
-    </button>
-</div>
-
-
-            <div id="response-display" class="response-display">
-                <!-- AI responses will appear here -->
-            </div>
-
-            <div id="status" class="status">Status: Initializing...</div>
         </div>
     </div>
     <div id="error-log" class="error-log"></div>
