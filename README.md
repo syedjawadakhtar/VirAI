@@ -26,10 +26,10 @@
 
 ## 🌟 Features
 
-- **Interactive Chat Interface**: Talk with Ollama's powerful language models in a friendly web UI
+- **Speech to text**: Talk with Ollama's powerful language models in a friendly web UI and microphones
 - **Live 2D Animation**: Chat with Hana, an expressive anime character that responds to your interactions
 - **Markdown Support**: View beautifully formatted responses with syntax highlighting
-- **LaTeX Math Rendering**: Display mathematical equations properly with KaTeX
+- **Know the expression of the avatar**: Display mathematical equations properly with KaTeX
 - **Customizable Settings**: Choose your Ollama model and configure system prompts
 - **Responsive Design**: Enjoy HanaVerse on desktop and mobile devices
 - **Real-time Response**: Stream responses as they're generated
@@ -75,7 +75,8 @@ python server.py
 The server will start running at http://localhost:5000 by default.
 
 ### Step 4: Access HanaVerse in your browser
-After running the server open index.html in your web browser and accese **HanaVerse**
+Use 
+```python -m http.server 8000``` to serve the front end of the application on your browser.
 
 ### 💬 Usage
 
@@ -156,7 +157,8 @@ You may use, copy, and run this software for personal or educational use only.
 
 
 <div align="center">
-Made with ♥️ by Ashish Patnaik
+Made with ♥️ by Team VirAI
+Thanks to Ashish Patnaik for the base code
 </div>
 
 <div align="center">
