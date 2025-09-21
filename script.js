@@ -222,6 +222,72 @@ async function loadDefaultMotionSync() {
     }
 }
 
+// Expression control functions
+function setExpression(emotion) {
+    if (!model || !model.internalModel || !model.internalModel.coreModel) return;
+
+    try {
+        const params = model.internalModel.coreModel;
+
+        switch(emotion) {
+            case 'happy':
+                params.setParameterValueById('ParamMouthForm', 1.0);
+                params.setParameterValueById('ParamEyeLOpen', 1.0);
+                params.setParameterValueById('ParamEyeROpen', 1.0);
+                break;
+            case 'sad':
+                params.setParameterValueById('ParamMouthForm', -1.0);
+                params.setParameterValueById('ParamBrowLY', -0.8);
+                params.setParameterValueById('ParamBrowRY', -0.8);
+                break;
+            case 'surprised':
+                params.setParameterValueById('ParamEyeLOpen', 1.5);
+                params.setParameterValueById('ParamEyeROpen', 1.5);
+                params.setParameterValueById('ParamMouthOpenY', 0.8);
+                break;
+            case 'angry':
+                params.setParameterValueById('ParamBrowLY', -1.0);
+                params.setParameterValueById('ParamBrowRY', -1.0);
+                params.setParameterValueById('ParamMouthForm', -0.5);
+                break;
+            default: // neutral
+                params.setParameterValueById('ParamMouthForm', 0);
+                params.setParameterValueById('ParamBrowLY', 0);
+                params.setParameterValueById('ParamBrowRY', 0);
+                params.setParameterValueById('ParamEyeLOpen', 1.0);
+                params.setParameterValueById('ParamEyeROpen', 1.0);
+                params.setParameterValueById('ParamMouthOpenY', 0);
+                break;
+        }
+        console.log(`[Expression] Set to: ${emotion}`);
+    } catch (err) {
+        console.warn(`[Expression] Failed to set expression: ${err.message}`);
+    }
+}
+
+function analyzeEmotion(text) {
+    const lowerText = text.toLowerCase();
+
+    // Happy emotions
+    if (/\b(happy|joy|excited|great|awesome|wonderful|amazing|fantastic|excellent|good|smile|laugh)\b/.test(lowerText)) {
+        return 'happy';
+    }
+    // Sad emotions
+    if (/\b(sad|sorry|disappointed|upset|cry|tears|awful|terrible|bad|depressed)\b/.test(lowerText)) {
+        return 'sad';
+    }
+    // Surprised emotions
+    if (/\b(wow|amazing|incredible|unbelievable|surprised|shocked|omg|really)\b/.test(lowerText)) {
+        return 'surprised';
+    }
+    // Angry emotions
+    if (/\b(angry|mad|furious|annoyed|frustrated|hate|damn|stupid|idiot)\b/.test(lowerText)) {
+        return 'angry';
+    }
+
+    return 'neutral';
+}
+
 // Function to create or get AudioContext
 function getAudioContext() {
     if (!audioContext || audioContext.state === 'closed') {
@@ -359,6 +425,10 @@ async function speakText(textToSpeak) {
                     } else {
                          console.warn("[SpeakText] MotionSync not available, proceeding without lip-sync.");
                     }
+
+                    // Set facial expression based on text content
+                    const emotion = analyzeEmotion(textToSpeak);
+                    setExpression(emotion);
                     updateStatus('Playing audio...');
                     console.log('[SpeakText] Attempting to play audio element...');
                     currentAudioElement.play()
@@ -448,6 +518,9 @@ function stopSpeaking(updateUI = true) {
             console.error("[StopSpeaking] MotionSync Reset Error:", resetErr);
         }
     }
+
+    // Reset expression to neutral
+    setExpression('neutral')
 
     if (updateUI) {
         console.log('[StopSpeaking] Updating UI elements.');
